@@ -11,4 +11,12 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.logo-container{
+    width: 500px;
+    height: 500px;
+    margin-left: 10%;
+}
 
+.landing-logo-completo{
+    width: 100%;
+}

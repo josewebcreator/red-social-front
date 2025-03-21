@@ -21,7 +21,8 @@ function Login(){
         <div className="Login">
             {/*Colocar logos aqui*/}
             <div className="logos">
-
+                <img src={`simbolo.png`} alt="simbolo" />
+                <img src={`usm.png`} alt="simbolo" />
             </div>
             
             {   /*Se Muestran los formularios del login en base a la eleccion*/

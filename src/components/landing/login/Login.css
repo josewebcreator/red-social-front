@@ -2,8 +2,8 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 600px;
-    height: 450px;
+    width: 500px;
+    min-height: 450px;
     background-color: #ffffffc4;
     margin-top: 2.5%;
     margin-right: 20px;
@@ -13,19 +13,33 @@
     overflow: hidden;
 }
 
-.logos{
+.logos {
     width: 100%;
     height: 100px;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    display: flex;
+    flex-direction: row;
 }
 
-.login-form{
+.logos img {
+    width: 100px;
+    margin: 0 10px; /* Opcional: añade un pequeño margen entre los logos */
+}
+
+.login-form,
+.LoginRegister,
+.loginForget{
     width: 100%;
     height: auto;
     padding-top: 20px;
     
 }
 
-.login-form >div{
+.login-form >div,
+.LoginRegister >div,
+.LoginForget >div
+{
     width: 100%;
     height: auto;
     padding-bottom: 20px;
@@ -35,7 +49,7 @@
 
 .login-form-input{
     width: 90%;
-    height: 40px;
+    height: 30px;
     border-radius: 20px;
     border-color: #c5c5c5;
     font-size: 14px;
@@ -54,6 +68,7 @@
 .login-form-status{
     font-style: italic;
 }
+/**/
 
 .login-form-submit{
     width: 80%;
@@ -93,4 +108,24 @@
 
 .login-footer p a:hover {
     color: #81d4fa; /* Azul claro celeste */
+}
+
+/*Registro de usuarios*/
+
+.login-form-documentTipo{
+    width: 8%;
+    height: 30px;
+    border-radius: 15px 0 0 15px;
+    border-color: #c5c5c5;
+}
+
+.login-form-documentNumber{
+    width: 82%;
+    height: 30px;
+    border-radius: 0 15px 15px 0;
+    border-color: #c5c5c5;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    transition: border-color 0.3s ease;
 }
