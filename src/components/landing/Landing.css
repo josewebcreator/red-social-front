@@ -3,20 +3,36 @@
 .Landing {
     width: 100%;
     height: 100%;
-    position : relative;
-    display: grid; /* Habilitar grid */
-    grid-template-columns: 1fr auto; /* Definir dos columnas: una que ocupa el espacio restante y otra que se ajusta al contenido */
-    align-items: center; /* Opcional: Centrar verticalmente */
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     overflow: auto;
     font-family: 'Roboto', sans-serif;
 }
 
-.logo-container{
+.logo-container {
     width: 500px;
     height: 500px;
-    margin-left: 10%;
+    margin-left: 6.5%;
 }
 
-.landing-logo-completo{
+.landing-logo-completo {
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .Landing {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .logo-container {
+        display: none;
+    }
+
+    .landing-logo-completo {
+        width: 100%;
+    }
 }
