@@ -1,6 +1,8 @@
 import './Landing.css'
 import Login from './login/Login'
 import usmBackground from './assets/usm-background.jpg'
+import { useContext } from 'react';
+import { MyContext } from '../../context/context';
 
 function Landing(){
 
