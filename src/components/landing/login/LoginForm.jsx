@@ -1,13 +1,16 @@
-import { useRef } from 'react'
+import { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function LoginForm(){
-
-    const emailRef = useRef(null)
-    const passwordRef = useRef(null)
+function LoginForm() {
+    const emailRef = useRef(null);
+    const passwordRef = useRef(null);
+    const navigate = useNavigate();
 
     const handleSubmitLogin = (e) => {
         e.preventDefault();
-    }
+        // Aquí se debe agregar la lógica de autenticación
+        navigate('/feed');
+    };
 
     return (
         <form className='LoginForm login-form' onSubmit={handleSubmitLogin}>
@@ -42,8 +45,7 @@ function LoginForm(){
             </div>
                 
         </form>
-    )
-
+    );
 }
 
 export default LoginForm;
