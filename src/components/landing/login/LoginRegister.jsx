@@ -1,10 +1,14 @@
-import { useRef, useState } from "react"
+import { useRef, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
-function LoginRegister(){
+function LoginRegister() {
+    const navigate = useNavigate();
 
     const handleSubmitRegister = (e) => {
         e.preventDefault();
-    }
+        // Aquí se debe agregar la lógica de registro
+        navigate('/feed');
+    };
 
     return (
         <form className="LoginRegister" onSubmit={handleSubmitRegister}>
@@ -44,4 +48,4 @@ function LoginRegister(){
     )
 }
 
-export default LoginRegister
+export default LoginRegister;
