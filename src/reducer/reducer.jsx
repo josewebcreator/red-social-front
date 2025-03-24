@@ -2,9 +2,13 @@ import actionTypes from './actionTypes';
 
 export function reducer(state, action) {
     switch (action.type) {
-        // Add cases for action types here
+        case actionTypes.ADD_POST:
+            return {
+                ...state,
+                posts: [...state.posts, action.payload],
+            };
+        // Otros casos pueden ser añadidos aquí
         default:
             return state;
     }
 };
-

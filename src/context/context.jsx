@@ -1,15 +1,20 @@
-import React, { createContext, useState } from 'react';
+import { createContext, useReducer } from 'react';
+import initialState from '../reducer/initialState';
+import { reducer } from '../reducer/reducer';
 
-const MyContext = createContext();
+export const MyContext = createContext();
 
-const MyProvider = ({ children }) => {
-    const [state, setState] = useState(null);
+export function MyProvider ({ children }){
+    const [appState, dispatch] = useReducer(reducer, initialState);
+
+    const providerState = {
+        appState,
+        dispatch
+    };
 
     return (
-        <MyContext.Provider value={{ state, setState }}>
+        <MyContext.Provider value={providerState}>
             {children}
         </MyContext.Provider>
     );
 };
-
-export { MyContext, MyProvider };
