@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Feed.css';
 import Post from './Post';
+import CreadHeader from './CreadHeader';
+import { FiUser, FiBookmark, FiFileText, FiSettings, FiPlusCircle } from 'react-icons/fi';
 
 function Feed() {
     const [posts, setPosts] = useState([]);
@@ -32,10 +34,33 @@ function Feed() {
 
     return (
         <div className="Feed">
+            <CreadHeader />
             <div className="feed-container">
+                {/* Columna izquierda */}
                 <div className="left-column">
-                    {/* Contenido adicional para la columna izquierda */}
+                    <div className="menu-item">
+                        <FiUser className="menu-icon" />
+                        Perfil
+                    </div>
+                    <div className="menu-item">
+                        <FiBookmark className="menu-icon" />
+                        Guardados
+                    </div>
+                    <div className="menu-item">
+                        <FiFileText className="menu-icon" />
+                        Notas
+                    </div>
+                    <div className="menu-item">
+                        <FiSettings className="menu-icon" />
+                        Configuración
+                    </div>
+                    <div className="menu-item">
+                        <FiPlusCircle className="menu-icon" />
+                        Más
+                    </div>
                 </div>
+
+                {/* Columna central */}
                 <div className="middle-column">
                     <form onSubmit={handlePostSubmit} className="new-post-form">
                         <textarea
@@ -78,8 +103,10 @@ function Feed() {
                         ))}
                     </div>
                 </div>
+
+                {/* Columna derecha */}
                 <div className="right-column">
-                    {/* Contenido adicional para la columna derecha */}
+                    {/* Espacio vacío para contenido adicional */}
                 </div>
             </div>
         </div>
